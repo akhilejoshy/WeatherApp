@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Weather App</title>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Weather App</h1>
+        
+        <form method="GET" class="form-inline justify-content-center mb-4">
+            <input type="text" name="city" class="form-control mr-2" placeholder="Enter city name" required>
+            <button type="submit" class="btn btn-primary">Get Weather</button>
+        </form>
+        {% if error %}
+            <div class="alert alert-danger text-center">{{ error }}</div>
+        {% else %}
+            <div class="card mx-auto" style="max-width: 400px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title">{{ city }}</h3>
+                    <p class="lead">{{ temperature }}°C</p>
+                    <p class="text-muted">{{ description }}</p>
+                    <img src="http://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="Weather icon">
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
