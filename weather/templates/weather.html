@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WeatherApp</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- FontAwesome CDN -->
@@ -17,21 +17,17 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* border: 1px solid black; */
         }
         body{
             height: 100vh;
             background-image: url("{% static 'images/backgroundimage.jpg' %}");
             background-size: cover;
             background-attachment: fixed;
-            
-           
         }
         .container{
             width: 500px;
             background: rgba(53, 53, 53, 0.288);
             border-radius: 15px;
-            /* border: none; */
             padding: 30px;
         }
         .form-control{
@@ -39,8 +35,6 @@
         }
         .btn{
             border-radius: 50px;
-            /* background-color: #ffeb3b;
-            transition: background-color 0.3s; */
         }
         .btn:hover {
             background-color: #ffffff;
@@ -50,28 +44,12 @@
             font-weight: bold;
             color: #058320;
         }
-        .box-div{
-            /* display: flex; */
-            /* justify-content: space-around; */
-            text-align: center;
-            /* margin: 5px; */
-        }
         
         .box {
             border-radius: 10px;
-            /* padding: 15px; */
             background: rgba(255, 255, 255, 0.2);
             text-align: center;
-            /* flex: 1; */
-            /* margin:  5px; */
-        
         }
-       
-
-        /* .box h5 {
-            margin: 5px 0;
-            font-size: 1.2rem;
-        } */
         .icon-image img {
             width: 160px;
         }
@@ -82,11 +60,7 @@
             }
         }
         
-        
     </style>
-
-
-
 </head>
 <body class="d-flex justify-content-center align-items-center" >
     <div class="container">
@@ -107,7 +81,7 @@
             <h4 id="city" class="mt-2">{{ city }}</h4>
             <p >{{ date }}</p>
         </div>
-        <div class="row g-4"> 
+        <div class="row g-4 text-center"> 
             <div class="col-lg-6">
                 <div class="box p-2 m-2 ">
                     <h5>Humidity</h5>

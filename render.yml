@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: WeatherApp
-    env: python
-    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
-    startCommand: gunicorn WeatherApp.wsgi
-    staticPublishPath: staticfiles

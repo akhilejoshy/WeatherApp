@@ -29,7 +29,7 @@ class Wether(View):
         else:
             context = {"error": "City not found or API error."}
 
-        return render(request, "ui.html", context)
+        return render(request, "weather.html", context)
 
 
 
